@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce</title>
+
+  <!-- Tailwind v2 -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+<!-- ===== HEADER ===== -->
+<header class="bg-white text-gray-800 body-font shadow-lg">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+    
+    <!-- Logo -->
+    <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        class="w-10 h-10 text-yellow-500 p-2 bg-gray-800 rounded-full"
+        viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-2xl font-bold">Daraz</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="flex flex-wrap items-center text-base justify-center space-x-6 md:ml-0">
+      <a class="hover:text-yellow-500 transition-colors font-medium">Home</a>
+      <a class="hover:text-yellow-500 transition-colors font-medium">Shop</a>
+      <a class="hover:text-yellow-500 transition-colors font-medium">About</a>
+      <a class="hover:text-yellow-500 transition-colors font-medium">Contact</a>
+    </nav>
+
+    <!-- Sign in button -->
+    <button class="inline-flex items-center bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-white mt-4 md:mt-0 transition-all">
+      Sign In
+    </button>
+  </div>
+
+<!-- ==== Header ended ==== -->
+  </div>
+</header>
+
+<!-- ===== PRODUCT SECTION ===== -->
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-16 mx-auto">
+
+    <div class="lg:w-4/5 mx-auto flex flex-wrap border border-gray-200 rounded-lg shadow-sm p-6 bg-white">
+
+      <!-- IMAGE SIDE -->
+      <div class="lg:w-1/2 w-full flex flex-col items-center bg-gray-100 p-6 rounded-lg">
+
+        <img
+         id="mainImage"
+         loading="eager"
+         alt="Product"
+         class="w-full h-96 object-contain rounded-lg border border-gray-300 shadow-md mb-4"
+         src="https://img.drz.lazcdn.com/static/pk/p/e939183caa2f07b9faf2d81a52a2ea92.jpg_200x200q80.jpg_.avif">
+
+        <div class="flex gap-3 mt-4">
+          <img class="thumb w-16 h-16 object-contain border rounded cursor-pointer"
+            src="powerbankno1.jpg">
+          <img class="thumb w-16 h-16 object-contain border rounded cursor-pointer"
+            src="powerbankno2.jpg">
+          <img class="thumb w-16 h-16 object-contain border rounded cursor-pointer"
+            src="powerbankno3.jpg">
+          <img class="thumb w-16 h-16 object-contain border rounded cursor-pointer"
+            src="powerbankno4.jpg">
+          <img class="thumb w-16 h-16 object-contain border rounded cursor-pointer"
+            src="powerbankno5.jpg">
+        </div>
+
+      </div>
+
+      <!-- DETAILS SIDE -->
+      <div class="lg:w-1/2 w-full lg:pl-10 mt-6 lg:mt-0">
+
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">
+          POWER BANK
+        </h2>
+
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-2">
+          2600mah Portable Power Bank, USB Port, Input & Output Fast Charge
+        </h1>
+
+        <div class="flex mb-4 text-yellow-500">
+          ⭐⭐⭐⭐☆
+          <span class="text-gray-600 ml-3">4 Reviews</span>
+        </div>
+
+        <p class="leading-relaxed mb-5">
+          Compact and portable power bank with fast charging capability.
+          Perfect for travel and daily use.
+        </p>
+
+        <div class="flex mt-6 items-center pb-5 border-b border-gray-200 mb-5">
+          <div class="flex items-center">
+            <span class="mr-3">Color</span>
+            <button class="border w-6 h-6 rounded-full"></button>
+            <button class="border w-6 h-6 rounded-full bg-gray-700 ml-2"></button>
+            <button class="border w-6 h-6 rounded-full bg-yellow-500 ml-2"></button>
+          </div>
+
+          <div class="flex ml-6 items-center">
+            <span class="mr-3">Size</span>
+            <select class="border rounded py-2 px-3">
+              <option>SM</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-2xl font-medium">Rs.5000</span>
+          <button class="ml-auto bg-blue-500 text-white py-2 px-6 rounded">
+            Buy Now
+          </button>
+          <button class="bg-yellow-500 text-white py-2 px-6 rounded">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAYMENT SECTION ===== -->
+<section class="bg-white py-12 shadow-inner">
+  <div class="container mx-auto px-5">
+    <h2 class="text-2xl font-bold text-center mb-6">Payment Options</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <img class="h-12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpE..." alt="Visa">
+      <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+      <img class="h-12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASsAAACoCAMAAACPKThE..." alt="PayPal">
+      <img class="h-12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCT..." alt="JazzCash">
+    </div>
+  </div>
+</section>
+
+<!-- ===== THUMB SCRIPT ===== -->
+<script>
+  const mainImage = document.getElementById("mainImage");
+  const thumbs = document.querySelectorAll(".thumb");
+
+  thumbs.forEach(img => {
+    img.addEventListener("click", () => {
+      mainImage.src = img.src;
+    });
+  });
+</script>
+
+</body>
+</html>

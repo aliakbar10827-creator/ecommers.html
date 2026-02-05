@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daraz Ecommerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-100 via-white to-gray-100">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap p-5 justify-between items-center">
+      <a class="flex title-font font-bold items-center text-gray-900 text-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3">Daraz</span>
+      </a>
+
+      <nav class="flex flex-wrap items-center text-base space-x-6">
+        <a class="hover:text-yellow-500 transition duration-300">Home</a>
+        <a class="hover:text-yellow-500 transition duration-300">About</a>
+        <a class="hover:text-yellow-500 transition duration-300">Categories</a>
+        <a class="hover:text-yellow-500 transition duration-300">Contact</a>
+      </nav>
+
+      <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-md shadow-md transition">
+        Sign In
+      </button>
+    </div>
+  </header>
+<!-- SLIDER -->
+<div class="container mx-auto px-5 mt-8">
+  <div class="relative w-full h-56 md:h-96 border-2 border-gray-200 rounded-lg shadow-md overflow-hidden">
+
+    <!-- IMAGE -->
+    <img
+      id="slider-image"
+      src="https://img.lazcdn.com/us/domino/b7084da3-4f97-4ee8-aff0-d6356a7ca22b_PK-1976-688.jpg_2200x2200q80.jpg_.avif"
+      class="w-full h-full object-cover transition-opacity duration-500 opacity-100"
+    />
+
+    <!-- LEFT BUTTON -->
+    <button onclick="prevSlide()"
+      class="absolute top-1/2 left-3 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded-full">
+      &#10094;
+    </button>
+
+    <!-- RIGHT BUTTON -->
+    <button onclick="nextSlide()"
+      class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded-full">
+      &#10095;
+    </button>
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  const images = [
+    "https://img.lazcdn.com/us/domino/b7084da3-4f97-4ee8-aff0-d6356a7ca22b_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+    "https://img.lazcdn.com/us/domino/153b2562-2211-426e-81cd-eeb8255e98cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+    "https://img.lazcdn.com/us/domino/7ef00093-4ac5-4c63-ab1a-62cc141a4247_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+    "https://img.lazcdn.com/us/domino/a479b4d1-b209-41c2-a551-f88d0da18d89_PK-1976-688.jpg_2200x2200q80.jpg_.avif"
+  ];
+
+  let currentIndex = 0;
+  const sliderImage = document.getElementById("slider-image");
+
+  function showSlide(index) {
+    sliderImage.style.opacity = 0;
+
+    setTimeout(() => {
+      sliderImage.src = images[index];
+      sliderImage.style.opacity = 1;
+    }, 300); // faster fade
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showSlide(currentIndex);
+  }
+
+  // AUTO SLIDE (FASTER)
+  setInterval(nextSlide, 5000);
+</script>
+
+
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="container mx-auto px-5 py-16">
+    <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- Product Card Template -->
+       <!--nestle product-->
+      <a href="nestle.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <img class="w-full h-48 object-contain p-4 group-hover:scale-105 transition"
+            src="https://img.drz.lazcdn.com/static/pk/p/6aaf7dfec24dd38e276b6afac08d5326.jpg_400x400q80.jpg_.avif" alt="Nestle Cerelac">
+          <div class="p-4 border-t">
+            <h3 class="text-xs text-gray-400">Nestle</h3>
+            <h2 class="font-semibold text-gray-800">Nestle Cerelac 350g</h2>
+            <p class="text-yellow-500 font-bold mt-1">Rs. 737</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Glasses Product Card -->
+      <a href="Glasses.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <img class="w-full h-48 object-contain p-4 group-hover:scale-105 transition"
+            src="https://img.drz.lazcdn.com/g/kf/S965c0a9a0f124bef8fb484353cfdb7ceK.jpg_200x200q80.jpg_.avif" alt="Blue Light Glasses">
+          <div class="p-4 border-t">
+            <h3 class="text-xs text-gray-400">Glasses</h3>
+            <h2 class="font-semibold text-gray-800">Blue Light Glasses</h2>
+            <p class="text-yellow-500 font-bold mt-1">Rs. 567</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Laptop Bag -->
+      <a href="laptopbag.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <img class="w-full h-48 object-contain p-4 group-hover:scale-105 transition"
+            src="https://img.drz.lazcdn.com/static/pk/p/24b82c3876c311bdf687dcf68dee70ba.jpg_200x200q80.jpg_.avif" alt="Dell Pro Sleeve">
+          <div class="p-4 border-t">
+            <h3 class="text-xs text-gray-400">Laptop Bags</h3>
+            <h2 class="font-semibold text-gray-800">Dell Pro Sleeve</h2>
+            <p class="text-yellow-500 font-bold mt-1">Rs. 1200</p>
+          </div>
+        </div>
+      </a>
+
+   <!-- Earbuds -->
+      <a href="earbuds.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+          <img class="w-full h-48 object-contain p-4 group-hover:scale-105 transition"
+            src="https://img.drz.lazcdn.com/static/pk/p/01fbb0806fd32488e9a2c3144d96c7cc.jpg_200x200q80.jpg_.avif" alt="Airpods Pro">
+          <div class="p-4 border-t">
+            <h3 class="text-xs text-gray-400">Earbuds</h3>
+            <h2 class="font-semibold text-gray-800">Airpods Pro</h2>
+            <p class="text-yellow-500 font-bold mt-1">Rs. 2000</p>
+          </div>
+        </div>
+      </a>
+
+      
+    <!-- Bags -->
+    <a href="bags.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img class="w-full h-48 object-contain"
+          src="https://img.drz.lazcdn.com/g/kf/Sddfb51d3f1b1468c9e943e1c01229fe4F.jpg_200x200q80.jpg_.avif"
+          alt="Travel Backpack">
+        <div class="p-4 border-t">
+          <h3 class="text-xs text-gray-500">Bags</h3>
+          <h2 class="font-semibold">Travel Backpack</h2>
+        <p class="text-yellow-600 font-bold mt-1">Rs. 700</p>
+      </div>
+    </div>
+
+    <!-- Powerbank -->
+     
+    <a href="powerbank.html" class="group">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img class="w-full h-48 object-contain"
+          src="https://img.drz.lazcdn.com/static/pk/p/e939183caa2f07b9faf2d81a52a2ea92.jpg_200x200q80.jpg_.avif"
+          alt="Power Bank">
+        <div class="p-4 border-t">
+          <h3 class="text-xs text-gray-500">Power Bank</h3>
+          <h2 class="font-semibold">26000mAh Power Bank</h2>
+          <p class="text-yellow-600 font-bold mt-1">Rs. 5000</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Sandals -->
+    <a href="sandals.html" class="group">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img class="w-full h-48 object-contain"
+          src="https://img.drz.lazcdn.com/static/pk/p/aa4244fdc1e20e2f6e938393b7eff7e8.jpg_200x200q80.jpg_.avif"
+          alt="Men Soft Sandals">
+        <div class="p-4 border-t">
+          <h3 class="text-xs text-gray-500">Sandals</h3>
+        <h2 class="font-semibold">Men Soft Sandals</h2>
+        <p class="text-yellow-600 font-bold mt-1">Rs. 300</p>
+      </div>
+    </div>
+
+<!-- Dumbbells -->
+<a href="dumbbells.html" class="group">
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+    <img class="w-full h-48 object-contain"
+      src="https://img.drz.lazcdn.com/g/kf/Sebffdc39d3e245d0ab7bb8fd2c9e36df0.jpg_200x200q80.jpg_.avif"
+      alt="Rubber Dumbbells">
+    <div class="p-4 border-t">
+      <h3 class="text-xs text-gray-500">Dumbbells</h3>
+      <h2 class="font-semibold">Rubber Dumbbells</h2>
+      <p class="text-yellow-600 font-bold mt-1">Rs. 850</p>
+    </div>
+  </div>
+</a>
+
+      <!-- Add more product cards as above -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10 mt-16">
+    <div class="container mx-auto flex flex-wrap justify-between">
+      <div class="w-full md:w-1/3 mb-6 md:mb-0">
+        <h3 class="text-xl font-bold text-white mb-2">Daraz</h3>
+        <p>Shop the best products online at affordable prices. Enjoy fast delivery and amazing offers!</p>
+      </div>
+      <div class="w-full md:w-1/3 mb-6 md:mb-0">
+        <h3 class="text-xl font-bold text-white mb-2">Quick Links</h3>
+        <ul>
+          <li><a class="hover:text-yellow-500 transition" href="#">Home</a></li>
+          <li><a class="hover:text-yellow-500 transition" href="#">About</a></li>
+          <li><a class="hover:text-yellow-500 transition" href="#">Categories</a></li>
+          <li><a class="hover:text-yellow-500 transition" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/3">
+        <h3 class="text-xl font-bold text-white mb-2">Contact Us</h3>
+        <p>Email: support@daraz.com</p>
+        <p>Phone: +92 300 1234567</p>
+      </div>
+    </div>
+    <p class="text-center mt-6 text-gray-500">© 2026 Daraz Ecommerce. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
